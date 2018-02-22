@@ -1,0 +1,2 @@
+rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 9922" --progress  ./ --exclude vendor --exclude .git eminetto.me@eminetto-me.umbler.net:/home/eminetto.me/public
+ssh eminetto.me@eminetto-me.umbler.net -p 9922 'cd public/api && /usr/local/bin/php70 ../composer.phar install'
